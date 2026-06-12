@@ -13,7 +13,8 @@ function AuthContextProvider({children}) {
         navigate('/')
     }
 
-    function handleLogin() {
+    function handleLogin(e) {
+        e.preventDefault();
         toggleIsAuth( true);
         console.log ( "Gebruiker is ingelogd!" );
         navigate('/profile')
