@@ -7,7 +7,7 @@ function Profile() {
     return (
 
         <>
-            {isAuth ? (
+            {isAuth.isAuth ? (
                 <>
                     <h1>Profielpagina</h1>
                     <section>

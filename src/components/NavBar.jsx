@@ -19,7 +19,7 @@ function NavBar() {
           </span>
         </Link>
 
-      { !isAuth &&
+      { !isAuth.isAuth &&
           <div>
         <button
             type="button"
@@ -35,7 +35,7 @@ function NavBar() {
         </button>
       </div>}
 
-      { isAuth &&
+      { isAuth.isAuth &&
           <div>
             <button
                 type="button"
