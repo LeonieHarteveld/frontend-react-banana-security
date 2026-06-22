@@ -3,6 +3,7 @@ import {Link, useNavigate} from 'react-router-dom';
 import {AuthContext} from "../context/AuthContext";
 import axios from "axios";
 
+
 function SignIn() {
     const baseUrl = "https://novi-backend-api-wgsgz.ondigitalocean.app/"
     const {handleLogin} = useContext(AuthContext);
@@ -33,7 +34,8 @@ function SignIn() {
                 }
             });
             console.log(response.data);
-            handleLogin(response.data.token);
+            const token = response.data.token;
+            handleLogin(token);
         } catch (e) {
             console.log(e)
         }
